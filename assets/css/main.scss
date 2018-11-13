@@ -2,7 +2,61 @@
 
 ---
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family:monospace;
   background: red;
+  margin: 0;
+}
+
+h1 {
+  margin:0;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  &:hover {
+    color: white;
+  }
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+
+  li {
+    display: inline
+  }
+}
+
+#container {
+  text-align: center;
+  // background-color: white;
+  max-width: 1000px;
+  margin: 0 auto;
+
+  p{
+    font-size: 1.5em;
+    line-height: 1.5em;
+    letter-spacing: 0.1em;
+    text-align: justify;
+    // margin: 3em;
+    padding: 3em;
+  }
+
+  img {
+    max-width: 100%;
+    border: 3px solid white;
+    border-radius: 10px;
+  }
+}
+
+.logo {
+  display: block;
+  max-width: 80%;
+  margin: 40px auto;
 }
