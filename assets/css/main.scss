@@ -1,6 +1,7 @@
 ---
 
 ---
+$large-size: 1000px;
 
 * {
   box-sizing: border-box;
@@ -36,7 +37,7 @@ ul {
 #container {
   text-align: center;
   // background-color: white;
-  max-width: 1000px;
+  max-width: $large-size;
   margin: 0 auto;
 
   p{
@@ -45,7 +46,11 @@ ul {
     letter-spacing: 0.1em;
     text-align: justify;
     // margin: 3em;
-    padding: 3em;
+    padding: 1em;
+
+    @media (min-width: $large-size) {
+      padding: 3em;
+    }
   }
 
   img {
@@ -59,4 +64,23 @@ ul {
   display: block;
   max-width: 80%;
   margin: 40px auto;
-}
+
+  // @media (min-width: $large-size) {
+  //   display: none;
+  }
+
+  .image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: space-around;
+
+    .cell {
+      // width: 100px;
+      background-size: cover;
+      background-position: center;
+      height: 150px;
+      margin: 3px;
+      flex: 1 0 30%;
+    }
+  }
